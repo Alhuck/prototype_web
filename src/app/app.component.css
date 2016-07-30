@@ -1,0 +1,40 @@
+.main-container {
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row;
+    align-content: stretch; 
+    flex-wrap: wrap;
+    /*background-color: lightgrey;*/
+    position: relative;
+    height:100%;
+}
+
+.main {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.main-items {
+    /*background-color: cornflowerblue;*/
+    margin: 10px;
+}
+
+.item1 {
+    flex: 1;
+    margin: 0;
+    background-color: rgb(48, 63, 148);
+    color: white;
+}
+.item2 {
+    flex: 5;
+}
+
+.site-color {
+    background-color:rgb(48, 63, 148);
+}
+.text-color {
+    color: white;
+}
