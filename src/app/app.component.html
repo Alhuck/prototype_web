@@ -7,26 +7,44 @@
         </md-nav-list>
     </md-sidenav>
     <div class="main">
-        <md-toolbar class="site-color text-color">
-            Alhuck
-            <button id="desktop-icon" md-icon-button (click)="showMenu = !showMenu">
-                <md-icon fontSet="fa" fontIcon="fa-angle-down"></md-icon>
-            </button>
+        <md-toolbar id="mobile-toolbar" class="site-color text-color">
+            <md-icon fontSet="fa" fontIcon="fa-user"></md-icon>Username
             <button id="mobile-icon" md-icon-button (click)="showSideDiv.open()">
                 <md-icon>menu</md-icon>
             </button>
         </md-toolbar>
         <div class="main-container">
             <div class="main-items menu-items" id="menuItems">
-                <md-nav-list *ngIf="showMenu">
-                    <a md-list-item *ngFor="let menu of menus">
-                        <span md-line class="text-color">{{menu.name}}</span>
-                    </a>
-                </md-nav-list>
+                <div class="abs-cls">
+                    <span class="name-cls">
+                        <md-icon fontSet="fa" fontIcon="fa-user"></md-icon>Username
+                    </span>
+                    <button id="desktop-icon" md-icon-button (click)="showMenu = !showMenu">
+                        <md-icon fontSet="fa" fontIcon="fa-angle-down"></md-icon>
+                    </button>
+                </div>
+                <div class="menu-margin-cls full-width-cls">
+                    <md-nav-list *ngIf="showMenu">
+                        <a md-list-item *ngFor="let menu of menus">
+                            <span md-line class="text-color">{{menu.name}}</span>
+                        </a>
+                    </md-nav-list>
+                </div>
             </div>
             <div class="main-items main-content">
+                <md-toolbar id="desktop-toolbar" class="site-accent-color text-color">
 
+                </md-toolbar>
             </div>
+        </div>
+        <div class="footer-cls">
+            <md-toolbar id="footer-toolbar" class="site-accent-color accent-text-color">
+                <span class="abs-cls small-font-cls">#compo name</span>
+                <span class="rel-cls small-font-cls">
+                 <md-icon fontSet="fa" fontIcon="fa-copyright" class="min-width-cls"></md-icon>
+                  copyrights protected
+                </span>
+            </md-toolbar>
         </div>
     </div>
 </md-sidenav-layout>

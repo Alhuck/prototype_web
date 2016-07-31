@@ -18,7 +18,7 @@ import {MD_SIDENAV_DIRECTIVES} from '@angular2-material/sidenav';
     providers: [MdIconRegistry],
 })
 export class AppComponent {
-    showMenu: boolean = false;
+    showMenu: boolean = true;
     menus: any[] = [
         {
             name: "Home",
@@ -26,6 +26,14 @@ export class AppComponent {
         },
         {
             name: "Dashboard",
+            description: "dashboard"
+        },
+        {
+            name: "Console",
+            description: "dashboard"
+        },
+        {
+            name: "Changes",
             description: "dashboard"
         }
     ]
