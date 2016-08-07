@@ -1,0 +1,17 @@
+<div class="full-width-cls">
+    <div class="abs-cls">
+        <span class="name-cls">
+            <md-icon fontSet="fa" fontIcon="fa-user"></md-icon>Username
+        </span>
+        <button id="desktop-icon" md-icon-button (click)="showMenu = !showMenu">
+            <md-icon fontSet="fa" fontIcon="fa-angle-down"></md-icon>
+        </button>
+    </div>
+    <div class="menu-margin-cls">
+        <md-nav-list *ngIf="showMenu">
+            <a md-list-item *ngFor="let menu of menus" routerLink="{{menu.link}}" routerLinkActive="active">
+                <span md-line class="text-color">{{menu.name}}</span>
+            </a>
+        </md-nav-list>
+    </div>
+</div>

@@ -1,11 +1,23 @@
+@import 'src/style';
+
+// $color : black;
+// $accent-color : grey;
+// $text-color : #334296;
+
+$accent-color : #F5FDFB;
+$text-color : #334296;
+$color : rgb(48, 63, 148);
+$main-content-margin: 10px;
+$header-footer-min-height: 38px;
+$header-footer-height: 40px;
+
 .main-container {
     display: -webkit-flex;
     display: flex;
     flex-flow: row;
     align-content: stretch; 
     flex-wrap: wrap;
-    /*background-color: lightgrey;*/
-    position: relative;
+    // position: relative;
     height:100%;
 }
 
@@ -15,24 +27,28 @@
     width: 100%;
     display: flex;
     flex-flow: column;
+    top: 0;
+    right:0;
+    bottom:0;
+    left: 0;
 }
-
-/*.main-items {
-    margin: 10px;
-}*/
 
 .menu-items {
     flex: 1;
     margin: 0;
-    background-color: rgb(48, 63, 148);
+    background-color: $color;
     color: white;
 }
 .main-content {
     flex: 5;
 }
 
+.dynamic-content {
+    margin: $main-content-margin;
+}
+
 .site-color {
-    background-color:rgb(48, 63, 148);
+    background-color: $color;
 }
 .text-color {
     color: white;
@@ -42,11 +58,6 @@
     padding: 5px;
     cursor: pointer;
 }
-
-/*#sidenav {
-      background-color: black;
-      flex: 1;
-}*/
 
 .full-width-cls {
     width: 100%;
@@ -71,11 +82,11 @@
 }
 
 .site-accent-color {
-    background-color: #F5FDFB;
+    background-color: $accent-color;
 }
 
 .accent-text-color {
-    color: #334296;
+    color: $text-color;
 }
 
 .small-font-cls {
@@ -85,9 +96,14 @@
 .min-width-cls {
     width: 10px;
 }
-.footer-cls {
+.footer-cls{
     overflow: hidden;
 }
+
+.flex-display {
+    display: flex !important;
+}
+
 /**
 * media queries
 */
@@ -99,20 +115,12 @@
   
   #mobile-toolbar {
     display: block;
+    z-index:1;
   }
 
   #desktop-toolbar {
       display: none;
   }
-  /*#sidenav {
-      display: none;
-  }*/
-  /*#desktop-icon{
-      display: none;
-  }
-  #mobile-icon {
-      display: block;
-  }*/
 }
 
 @media screen and (min-width: 1024px){
@@ -131,10 +139,4 @@
   #desktop-toolbar {
       display: block;
   }
-  /*#desktop-icon {
-      display: block;
-  }
-  #mobile-icon {
-      display: none;
-  }*/
 }

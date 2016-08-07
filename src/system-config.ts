@@ -22,7 +22,8 @@ const materialPkgs:string[] = [
   'toolbar',
   'slide-toggle',
   'icon',
-  'list'
+  'list',
+  'card'
 ];
 
 materialPkgs.forEach((pkg) => {
